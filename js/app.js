@@ -113,7 +113,7 @@ var Toast , maxLoading, winframe, insideLoading, winconf;
 			for(var i=1; i<=days ;i++){
 				var vdate = start.add('days', i-1);
 				var selectedClass = '';
-				if(now.diff(vdate, 'days')==0)
+				if(now.format('YYYY/MM/DD')==vdate.format('YYYY/MM/DD'))
 					selectedClass = 'selecteddayitem';
 				var copyvdate = new persianDate(vdate); 
 				var events = getDateEvents(copyvdate.toCalendar('gregorian').toLocale('en').format('YYYY-MM-DD'), items);
